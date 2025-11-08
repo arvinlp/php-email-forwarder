@@ -36,10 +36,10 @@ A lightweight PHP script that automatically forwards incoming emails from an IMA
 ## ⚙️ Installation
 
 1. Clone or download the project:
-   ```bash
+```bash
    git clone https://github.com/arvinlp/php-email-forwarder.git
    cd php-email-forwarder
-   ```
+```
 2. Install Dependency:
 ```bash
    composer install
