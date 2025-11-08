@@ -26,6 +26,8 @@ $smtp_user = 'yourgmail@gmail.com';
 $smtp_pass = 'YOUR_APP_PASSWORD'; // use app password for Gmail
 $smtp_secure = 'tls'; // or 'ssl'
 
+// Delete emails after forwarding
+$delete_after_forward = true;
 
 // =============================================
 
@@ -77,7 +79,18 @@ if ($emails) {
 
         // mark email as seen
         imap_setflag_full($inbox, $email_number, "\\Seen");
+
+        // Delete email after forwarding
+        if ($delete_after_forward) {
+            imap_delete($inbox, $email_number);
+        }
     }
+
+    // Expunge deleted emails
+    if ($delete_after_forward) {
+        imap_expunge($inbox);
+    }
+
 } else {
     echo "No new messages.\n";
 }
