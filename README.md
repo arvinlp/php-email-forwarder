@@ -40,18 +40,18 @@ A lightweight PHP script that automatically forwards incoming emails from an IMA
    git clone https://github.com/arvinlp/php-email-forwarder.git
    cd php-email-forwarder
    ```
-2. Install Dependency
+2. Install Dependency:
 ```bash
    composer install
 ```
-3. Setup Config
+3. Setup Config:
 In File email.php Change this parameters:
 ```php
    $imap_host, $imap_user, $imap_pass
    $smtp_host, $smtp_user, $smtp_pass
    $forward_to
 ```
-4. Manulay test
+4. Manulay test:
 ```bash
    php imap_forwarder.php
 ```
