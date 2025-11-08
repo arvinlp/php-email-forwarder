@@ -55,3 +55,11 @@ In File email.php Change this parameters:
 ```bash
    php imap_forwarder.php
 ```
+
+---
+
+## ⚙️ Cronjob
+For runing in every 5 minute, you need add this to your host provider cronjob part
+```bash
+    */5 * * * * /usr/local/bin/php -q /home/username/email.php >/dev/null 2>&1
+```

@@ -55,3 +55,11 @@ $forward_to
 ```bash
     php imap_forwarder.php
 ```
+
+---
+
+## ⏱️ اجرای خودکار با Cron Job
+برای اجرای خودکار هر ۵ دقیقه، دستور زیر را در Cron Job هاست اضافه کنید:
+```bash
+    */5 * * * * /usr/local/bin/php -q /home/username/email.php >/dev/null 2>&1
+```
