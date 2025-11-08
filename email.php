@@ -1,9 +1,9 @@
 <?php
 /*
- * @Author: Arvin Loripour - ViraEcosystem 
- * @Date: 2025-11-08 11:37:19 
- * Copyright by Arvin Loripour 
- * WebSite : http://www.arvinlp.ir 
+ * @Author: Arvin Loripour - ViraEcosystem
+ * @Date: 2025-11-08 11:37:19
+ * Copyright by Arvin Loripour
+ * WebSite : http://www.arvinlp.ir
  * @Last Modified by: Arvin.Loripour
  * @Last Modified time: 2025-11-08 11:38:09
  */
