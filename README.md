@@ -1,3 +1,9 @@
+<div align="right">
+
+[🇮🇷 فارسی](README.fa.md) | [🇬🇧 English](README.md)
+
+</div>
+
 # PHP Email Forwarder
 
 A lightweight PHP script that automatically forwards incoming emails from an IMAP mailbox to one or more target email addresses using **PHPMailer** and **SMTP**.
