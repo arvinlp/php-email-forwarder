@@ -39,3 +39,15 @@
 ```bash
 git clone https://github.com/arvinlp/php-email-forwarder.git
 cd php-email-forwarder
+
+### 2️⃣ نصب وابستگی‌ها
+``` composer install
+
+### 3️⃣ تنظیم مقادیر در فایل
+در فایل email.php مقادیر زیر را با اطلاعات واقعی خود جایگزین کنید:
+```$imap_host, $imap_user, $imap_pass
+$smtp_host, $smtp_user, $smtp_pass
+$forward_to
+
+### 4️⃣ تست دستی
+```php imap_forwarder.php
