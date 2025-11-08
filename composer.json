@@ -1,2 +1,15 @@
 {
+    "name": "arvinlp/php-email-forwarder",
+    "description": "A simple PHP script that connects via IMAP and forwards all incoming emails to one or more addresses using PHPMailer over SMTP.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arvin Loripour",
+            "email": "arvinlp91@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
 }
