@@ -29,7 +29,7 @@ final class EmailForwarderConfig
         public readonly array $foldersToCheck = ['INBOX', 'Junk', 'Spam'], // پوشه‌هایی که چک می‌شوند
         public readonly bool $deleteAfterForward = true, // حذف ایمیل پس از فوروارد
         public readonly int $deleteAfterDays = 1, // حذف پس از چند روز (پیش‌فرض: 1 روز)
-        public readonly string $logFile = '/home/manize/forwarder/forwarded_emails.log' // فایل لاگ ایمیل‌های فوروارد شده
+        public readonly string $logFile = '/home/YourUserName/forwarder/forwarded_emails.log' // فایل لاگ ایمیل‌های فوروارد شده
     ) {}
 }
 
@@ -37,7 +37,7 @@ final class EmailForwarderConfig
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '/home/manize/forwarder/vendor/autoload.php';
+require '/home/YourUserName/forwarder/vendor/autoload.php';
 
 final class EmailForwarder
 {

@@ -34,7 +34,7 @@ final class EmailForwarderConfig
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '/home/manize/forwarder/vendor/autoload.php';
+require '/home/YourUserName/forwarder/vendor/autoload.php';
 
 final class EmailForwarder
 {
