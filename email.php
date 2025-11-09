@@ -19,7 +19,7 @@ final class EmailForwarderConfig
         public readonly int $imapPort = 993,
         public readonly string $imapUser = 'YourEmail@domain.ltd',
         public readonly string $imapPass = 'YourEmailPassword',
-        public readonly array $forwardTo = ['falatcoit@gmail.com'],
+        public readonly array $forwardTo = ['YourForwardEmail@domain.ltd'],
         public readonly string $smtpHost = 'MailServerDomain',
         public readonly int $smtpPort = 465,
         public readonly string $smtpUser = 'YourEmail@domain.ltd',
