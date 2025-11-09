@@ -297,19 +297,19 @@ final class MultiAccountEmailForwarder
     private function forwardEmail(array $emailData): bool
     {
         $forwardMessage = sprintf(
-            "=== Forwarded Message ===\n" .
-                "Account: %s\n" .
-                "From: %s\n" .
-                "Date: %s\n" .
-                "Folder: %s\n" .
-                "Original Subject: %s\n" .
-                "========================\n\n%s",
+            "<p><b>Account:</b> %s</p>
+         <p><b>From:</b> %s</p>
+         <p><b>Date:</b> %s</p>
+         <p><b>Folder:</b> %s</p>
+         <p><b>Original Subject:</b> %s</p>
+         <hr>
+         %s",
             $emailData['account_name'],
             $emailData['from'],
             $emailData['date'],
             $emailData['folder'],
             $emailData['original_subject'],
-            $emailData['body']
+            $emailData['body'] // HTML body
         );
 
         $allSuccess = true;
@@ -328,7 +328,6 @@ final class MultiAccountEmailForwarder
         $mail = new PHPMailer(true);
 
         try {
-            // تنظیمات SMTP
             $mail->isSMTP();
             $mail->Host = $this->currentAccount->smtpHost;
             $mail->SMTPAuth = true;
@@ -338,12 +337,12 @@ final class MultiAccountEmailForwarder
             $mail->Port = $this->currentAccount->smtpPort;
             $mail->CharSet = 'UTF-8';
 
-            // تنظیمات ایمیل
             $mail->setFrom($this->currentAccount->imapUser, "Auto Forwarder - {$this->currentAccount->name}");
             $mail->addAddress($recipient);
             $mail->Subject = $subject;
+            $mail->isHTML(true); // ✅ ایمیل HTML
+
             $mail->Body = $body;
-            $mail->isHTML(false);
 
             $mail->send();
             echo "      ✓ Forwarded to $recipient\n";
